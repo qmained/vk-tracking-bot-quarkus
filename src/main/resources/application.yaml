@@ -1,0 +1,25 @@
+quarkus:
+  rest-client:
+    vk-api:
+      uri: https://api.vk.ru
+  datasource:
+    username: postgres
+    password: root
+    jdbc:
+      url: jdbc:postgresql://localhost:5432/postgres
+  hibernate-orm:
+    physical-naming-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategySnakeCaseImpl
+    schema-management:
+      strategy: update
+
+vk:
+  v: 5.236
+  access-token: ${VK_ACCESS_TOKEN}
+  vk-admin-id: ${VK_ADMIN_ID}
+  tg-admin-id: ${TG_ADMIN_ID}
+ktgram:
+  bot:
+    - token: ${TELEGRAM_BOT_TOKEN}
+      identifier: Ral
+  auto-start-polling: true
+
